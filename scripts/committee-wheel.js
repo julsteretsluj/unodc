@@ -96,7 +96,7 @@
 
   function render() {
     var c = displayCommittee();
-    var logoSrc = c.logo ? "assets/committee-logos/" + c.logo + "?v=20260804c" : "";
+    var logoSrc = c.logo ? "assets/committee-logos/" + c.logo + "?v=20260804d" : "";
     var label = c.shortName || c.name;
     var isCurrent = committee().isCurrent;
     var rot = rotationDeg();
@@ -322,7 +322,7 @@
         var dc = displayCommittee();
         var img = root.querySelector(".wheel-center-logo");
         var name = root.querySelector(".wheel-center-name");
-        if (img && dc.logo) img.src = "assets/committee-logos/" + dc.logo + "?v=20260804c";
+        if (img && dc.logo) img.src = "assets/committee-logos/" + dc.logo + "?v=20260804d";
         if (name) name.textContent = dc.shortName || dc.name;
       }
     });
