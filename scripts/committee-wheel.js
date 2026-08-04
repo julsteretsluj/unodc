@@ -89,14 +89,14 @@
         WHEEL_CY +
         '" r="' +
         r +
-        '" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"></circle>';
+        '" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"></circle>';
     }
     return html;
   }
 
   function render() {
     var c = displayCommittee();
-    var logoSrc = c.logo ? "assets/committee-logos/" + c.logo + "?v=20260804f" : "";
+    var logoSrc = c.logo ? "assets/committee-logos/" + c.logo + "?v=20260804g" : "";
     var label = c.shortName || c.name;
     var isCurrent = committee().isCurrent;
     var rot = rotationDeg();
@@ -161,12 +161,12 @@
       '" fill="none" preserveAspectRatio="xMidYMid meet">' +
       "<defs>" +
       '<radialGradient id="vinylGradient" cx="35%" cy="35%" r="70%">' +
-      '<stop offset="0%" stop-color="#1e40af" stop-opacity="0.08"></stop>' +
-      '<stop offset="55%" stop-color="#0a2540" stop-opacity="0.12"></stop>' +
-      '<stop offset="100%" stop-color="#061828" stop-opacity="0.18"></stop>' +
+      '<stop offset="0%" stop-color="#2a2a2a"></stop>' +
+      '<stop offset="70%" stop-color="#0f0f0f"></stop>' +
+      '<stop offset="100%" stop-color="#0a0a0a"></stop>' +
       "</radialGradient>" +
       '<filter id="vinylShadow" x="-20%" y="-20%" width="140%" height="140%">' +
-      '<feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.2"></feDropShadow>' +
+      '<feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.5"></feDropShadow>' +
       "</filter>" +
       "</defs>" +
       '<circle cx="' +
@@ -183,7 +183,7 @@
       WHEEL_CY +
       '" r="' +
       CENTER_HOLE_RADIUS +
-      '" fill="transparent" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"></circle>' +
+      '" fill="#0a0a0a" stroke="#1a1a1a" stroke-width="2"></circle>' +
       "</svg>" +
       '<div class="wheel-center-label" style="width:' +
       CENTER_LABEL_RADIUS * 2 +
@@ -322,7 +322,7 @@
         var dc = displayCommittee();
         var img = root.querySelector(".wheel-center-logo");
         var name = root.querySelector(".wheel-center-name");
-        if (img && dc.logo) img.src = "assets/committee-logos/" + dc.logo + "?v=20260804f";
+        if (img && dc.logo) img.src = "assets/committee-logos/" + dc.logo + "?v=20260804g";
         if (name) name.textContent = dc.shortName || dc.name;
       }
     });
